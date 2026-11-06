@@ -35,6 +35,7 @@ Open <http://localhost:3000>. Data is stored in `server/var/sapling.db`.
 ## Simulating the conversation (Phase 1 walkthrough)
 
 1. Start the demo and open <http://localhost:3000>. The thread for `conv_001` is empty.
+   - **Quick tour for an audience.** The **Requirements ✓** tab lists every requirement from the brief with live proof: it runs the script, a restart, the evals and the phrasing sets on throwaway databases. **▶ Play all steps**, in the Phase 1 script card, resets the demo and plays steps 0–11 in the thread.
 2. **Step 0.** The composer starts on **Clinic staff (outbound)**. Click step **0** in the *Phase 1 script* list on the left to fill the composer, then press **Send**. The message is saved and shown, marked "simulated, no SMS sent". No agent reply is sent.
 3. **Steps 1–11.** The composer switches to **Alex (patient reply)**. Click each step, or type your own text, and press **Send**. Each inbound message is treated as coming from Alex's number on file.
 4. While you go, watch three places:

@@ -9,9 +9,11 @@ interface Props {
   onSelect(id: string): void;
   onNew(): void;
   onUseStep(step: ScriptStep): void;
+  onPlay(): void;
+  playing: boolean;
 }
 
-export function Sidebar({ patient, conversations, activeId, script, onSelect, onNew, onUseStep }: Props) {
+export function Sidebar({ patient, conversations, activeId, script, onSelect, onNew, onUseStep, onPlay, playing }: Props) {
   const med = patient.medications[0];
   const next = patient.upcoming_appointments.find((a) => a.status === 'booked');
   return (
@@ -70,8 +72,13 @@ export function Sidebar({ patient, conversations, activeId, script, onSelect, on
       </section>
 
       <section className="card script">
-        <h3>Phase 1 script</h3>
-        <p className="hint">Click a step to put it in the composer (you still press Send).</p>
+        <div className="row-between">
+          <h3>Phase 1 script</h3>
+          <button className="small" onClick={onPlay} disabled={playing} title="Resets the demo, then sends steps 0–11 one by one">
+            {playing ? 'Playing…' : '▶ Play all steps'}
+          </button>
+        </div>
+        <p className="hint">Click a step to put it in the composer (you still press Send), or play the whole script.</p>
         <ol>
           {script.map((s) => (
             <li key={s.step}>

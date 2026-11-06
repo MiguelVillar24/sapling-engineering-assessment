@@ -3,6 +3,7 @@ import { Composer, type Draft } from './components/Composer';
 import { HandoffPanel } from './components/HandoffPanel';
 import { Header, type Tab } from './components/Header';
 import { Records } from './components/Records';
+import { Requirements } from './components/Requirements';
 import { Sidebar } from './components/Sidebar';
 import { StaffQueue } from './components/StaffQueue';
 import { Thread } from './components/Thread';
@@ -19,6 +20,7 @@ export function App() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [highlight, setHighlight] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(false);
 
   const load = useCallback(async (preferred?: string | null) => {
     const s = await api.getState();
@@ -63,6 +65,29 @@ export function App() {
         await load(convId);
       } finally {
         setBusy(false);
+      }
+    });
+
+  /** Resets the demo and sends the Phase 1 script one step at a time so the audience can follow along. */
+  const playScript = () =>
+    guard(async () => {
+      if (!window.confirm('Play the Phase 1 script? This resets the demo data first, then sends steps 0–11 one by one.')) return;
+      setPlaying(true);
+      try {
+        await api.resetDemo();
+        let t = await load(null);
+        const conv = t?.conversation.id;
+        if (!conv) return;
+        for (const step of state!.script) {
+          setDraft({ from: step.from, text: step.text });
+          await new Promise((r) => setTimeout(r, 900));
+          await api.sendMessage(conv, step.from, step.text);
+          t = await load(conv);
+          await new Promise((r) => setTimeout(r, 1300));
+        }
+        setDraft({ from: 'patient', text: '' });
+      } finally {
+        setPlaying(false);
       }
     });
 
@@ -125,6 +150,8 @@ export function App() {
               })
             }
             onUseStep={(s) => setDraft({ from: s.from, text: s.text })}
+            onPlay={playScript}
+            playing={playing}
           />
           <section className="center">
             <div className="thread-head">
@@ -156,6 +183,8 @@ export function App() {
       )}
 
       {tab === 'records' && <Records />}
+
+      {tab === 'requirements' && <Requirements onNavigate={setTab} />}
     </div>
   );
 }

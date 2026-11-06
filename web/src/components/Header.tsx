@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { fmtDateTime, toClinicLocalInput } from '../lib/format';
 import type { Settings } from '../types';
 
-export type Tab = 'conversation' | 'staff' | 'records';
+export type Tab = 'conversation' | 'staff' | 'records' | 'requirements';
 
 interface Props {
   clinicName: string;
@@ -44,6 +44,9 @@ export function Header({ clinicName, settings, tab, pendingCount, onTab, onSetCl
         </button>
         <button className={tab === 'records' ? 'active' : ''} onClick={() => onTab('records')}>
           Records
+        </button>
+        <button className={tab === 'requirements' ? 'active' : ''} onClick={() => onTab('requirements')}>
+          Requirements ✓
         </button>
       </nav>
 

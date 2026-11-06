@@ -659,3 +659,108 @@ h3 {
     min-height: 600px;
   }
 }
+
+/* Requirements page */
+.reqs {
+  padding: 16px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+.summary {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  cursor: pointer;
+}
+.summary.ok {
+  border-color: var(--clinic-line);
+  background: var(--ok-bg);
+}
+.summary.bad {
+  border-color: #f5c2bd;
+  background: var(--danger-bg);
+}
+.summary .big {
+  font-size: 26px;
+  font-weight: 700;
+}
+.req-section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+.req-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.req-table th,
+.req-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 8px;
+  border-top: 1px solid #eef1ee;
+}
+.req-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+.req-table td:first-child {
+  width: 34%;
+}
+.req-table.compact td:first-child {
+  width: auto;
+}
+.reply-cell {
+  white-space: pre-wrap;
+  background: var(--agent);
+  border-radius: 6px;
+}
+.proof {
+  background: #fff;
+  color: var(--info);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  padding: 2px 8px;
+  margin: 2px 4px 2px 0;
+}
+.proof.live {
+  color: var(--ink);
+}
+.mark.ok {
+  color: var(--ok);
+  font-weight: 700;
+}
+.mark.bad {
+  color: var(--danger);
+  font-weight: 700;
+}
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+.checks li {
+  padding: 1px 0;
+}
+
+.req-table.steps td:first-child {
+  width: 44px;
+  white-space: nowrap;
+}
+.req-table.steps td:nth-child(2) {
+  width: 22%;
+}
+.req-table.steps td:nth-child(3) {
+  width: 20%;
+}

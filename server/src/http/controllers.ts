@@ -5,6 +5,7 @@ import { REQUEST_STATUSES } from '../core/domain.js';
 import { NotFoundError } from '../core/errors.js';
 import { DEFAULT_SCENARIO_NOW } from '../core/time/clock.js';
 import { PHASE1_SCRIPT } from '../scenario.js';
+import { verifyEvals, verifyPhrasing, verifyRestart, verifyScript } from '../demo/verify.js';
 
 /** Request bodies are validated with zod at the edge; the core re-validates its own invariants. */
 const SendMessageBody = z.object({
@@ -45,6 +46,14 @@ export class StateController {
       conversations: this.core.messaging.listConversations(),
       script: PHASE1_SCRIPT,
     };
+  }
+
+  /** Live proof for the Requirements page; runs on throwaway databases, never on the demo data. */
+  @Get('verify')
+  async verify() {
+    const started = Date.now();
+    const [script, restart, evals, phrasing] = [await verifyScript(), await verifyRestart(), await verifyEvals(), await verifyPhrasing()];
+    return { ran_at: new Date().toISOString(), duration_ms: Date.now() - started, script, restart, evals, phrasing };
   }
 
   @Get('export')
