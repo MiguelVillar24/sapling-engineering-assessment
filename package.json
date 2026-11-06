@@ -1,0 +1,29 @@
+{
+  "name": "sapling-patient-messaging",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sapling Family Clinic: two-way patient text messaging with a safe, context-aware staff-handoff agent (interview project).",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "npm run build -w web && npm run build -w server",
+    "start": "npm run start -w server",
+    "demo": "npm run build && npm start",
+    "dev": "concurrently -k -n server,web -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
+    "test": "npm test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web",
+    "scenario": "npm run scenario -w server --",
+    "inspect": "npm run inspect -w server --",
+    "eval": "npm run eval -w server --",
+    "evidence": "npm run evidence -w server",
+    "eval:phrasing": "npm run eval:phrasing -w server --"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

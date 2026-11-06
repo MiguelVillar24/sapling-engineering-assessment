@@ -1,0 +1,105 @@
+[
+  {"id": "f001", "context": "after_offer", "text": "k", "expect": "ask_time", "lang": "en", "note": "very brief agreement, no day"},
+  {"id": "f002", "context": "after_offer", "text": "yeah sure that sounds good go ahead and set something up for me whenever works", "expect": "ask_time", "lang": "en", "note": "voice dictation, agrees, no day"},
+  {"id": "f003", "context": "after_offer", "text": "Hi this is Alex's husband, yes he'd like that, he's pretty flexible most days", "expect": "ask_time", "lang": "en", "note": "caregiver agrees on Alex's behalf, no day"},
+  {"id": "f004", "context": "after_offer", "text": "Yes that'd be lovely, ta very much", "expect": "ask_time", "lang": "en", "note": "British wording, agrees, no day"},
+  {"id": "f005", "context": "after_offer", "text": "sí por favor, me parece bien", "expect": "ask_time", "lang": "es", "note": "Spanish agreement, no day"},
+
+  {"id": "f006", "context": "after_offer", "text": "pass. my bp is fine, I check it at home every day lol", "expect": "decline_offer", "lang": "en", "note": "sarcastic decline"},
+  {"id": "f007", "context": "after_offer", "text": "Not right now, thank you. I'll get in touch when things calm down at work.", "expect": "decline_offer", "lang": "en", "note": "polite decline"},
+  {"id": "f008", "context": "after_offer", "text": "nah all good mate, not this time", "expect": "decline_offer", "lang": "en", "note": "Australian decline"},
+
+  {"id": "f009", "context": "after_time_question", "text": "tue 2", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "14:00"}, "lang": "en", "note": "very brief, listed slot"},
+  {"id": "f010", "context": "after_time_question", "text": "thursday at for works for me", "expect": "create_appointment", "args": {"date": "2026-11-12", "window": "afternoon", "slot": "16:00"}, "lang": "en", "note": "voice dictation, homophone for/four"},
+  {"id": "f011", "context": "after_offer", "text": "yes please, Tuesday afternoon if possible", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon"}, "lang": "en", "note": "agrees and gives day + window"},
+  {"id": "f012", "context": "fresh", "text": "Hello, I'm Alex Morgan's wife. Could you get Alex in for the blood pressure recheck Thursday afternoon?", "expect": "create_appointment", "args": {"date": "2026-11-12", "window": "afternoon"}, "lang": "en", "note": "caregiver request"},
+  {"id": "f013", "context": "after_time_question", "text": "the 3:30 one", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "15:30"}, "lang": "en", "note": "picks listed slot by time only (only 3:30 is Tue)"},
+  {"id": "f014", "context": "after_time_question", "text": "1:30 thurs", "expect": "create_appointment", "args": {"date": "2026-11-12", "window": "afternoon", "slot": "13:30"}, "lang": "en", "note": "brief, listed slot"},
+  {"id": "f015", "context": "after_offer", "text": "Monday morning?", "expect": "create_appointment", "args": {"date": "2026-11-09", "window": "morning"}, "lang": "en", "note": "Monday morning, no listed slot"},
+  {"id": "f016", "context": "fresh", "text": "I was wondering whether it might be possible to come in on November 18th, sometime in the afternoon, for the blood pressure check Dr. Lee mentioned?", "expect": "create_appointment", "args": {"date": "2026-11-18", "window": "afternoon"}, "lang": "en", "note": "polite indirect, explicit November date"},
+  {"id": "f017", "context": "after_offer", "text": "sí, el martes por la tarde", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon"}, "lang": "es", "note": "Spanish, Tuesday afternoon"},
+  {"id": "f018", "context": "after_time_question", "text": "Tuesday at half three would suit me brilliantly, cheers", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "15:30"}, "lang": "en", "note": "British 'half three' = 3:30"},
+  {"id": "f019", "context": "after_offer", "text": "yeah righto, Thursdee arvo if ya can", "expect": "create_appointment", "args": {"date": "2026-11-12", "window": "afternoon"}, "lang": "en", "note": "Australian 'arvo' = afternoon"},
+  {"id": "f020", "context": "fresh", "text": "fine, since Dr Lee keeps bugging me about it. Nov 10, 2pm. happy now?", "expect": "create_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "14:00"}, "lang": "en", "note": "annoyed, explicit date + listed slot"},
+
+  {"id": "f021", "context": "after_request", "text": "Sorry, it's Alex's husband again. Could we do Thursday instead?", "expect": "update_appointment", "args": {"date": "2026-11-12", "window": "afternoon"}, "lang": "en", "note": "caregiver, day-only change keeps afternoon"},
+  {"id": "f022", "context": "after_request", "text": "make it the 3:30", "expect": "update_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "15:30"}, "lang": "en", "note": "brief, picks listed Tue slot"},
+  {"id": "f023", "context": "after_request", "text": "actually thurs at 4 would be better", "expect": "update_appointment", "args": {"date": "2026-11-12", "window": "afternoon", "slot": "16:00"}, "lang": "en", "note": "switch to listed Thu slot"},
+  {"id": "f024", "context": "after_request", "text": "hey so i just realized i have a meeting tuesday afternoon can we keep it tuesday but do the morning instead", "expect": "update_appointment", "args": {"date": "2026-11-10", "window": "morning"}, "lang": "en", "note": "voice dictation, time-of-day change"},
+  {"id": "f025", "context": "after_request", "text": "Would it be terribly inconvenient to move it to the 1:30 on Thursday?", "expect": "update_appointment", "args": {"date": "2026-11-12", "window": "afternoon", "slot": "13:30"}, "lang": "en", "note": "British polite indirect"},
+  {"id": "f026", "context": "after_request", "text": "mejor el jueves, por favor", "expect": "update_appointment", "args": {"date": "2026-11-12", "window": "afternoon"}, "lang": "es", "note": "Spanish, day-only change keeps afternoon"},
+  {"id": "f027", "context": "after_request", "text": "ugh can you just lock in the 2 o'clock already", "expect": "update_appointment", "args": {"date": "2026-11-10", "window": "afternoon", "slot": "14:00"}, "lang": "en", "note": "annoyed, picks listed Tue slot"},
+
+  {"id": "f028", "context": "after_request", "text": "any update?", "expect": "status_pending", "lang": "en", "note": "brief"},
+  {"id": "f029", "context": "after_request", "text": "so is tuesday locked in or what", "expect": "status_pending", "lang": "en", "note": "impatient"},
+  {"id": "f030", "context": "after_request", "text": "Has my wife's appointment been confirmed yet? Alex Morgan.", "expect": "status_pending", "lang": "en", "note": "caregiver"},
+  {"id": "f031", "context": "after_request", "text": "¿ya confirmaron mi cita?", "expect": "status_pending", "lang": "es", "note": "Spanish"},
+  {"id": "f032", "context": "after_request", "text": "hey just checking did that appointment go through or not yet", "expect": "status_pending", "lang": "en", "note": "voice dictation"},
+
+  {"id": "f033", "context": "fresh", "text": "when's my next appt", "expect": "next_appointment", "lang": "en", "note": "brief"},
+  {"id": "f034", "context": "fresh", "text": "what's the next thing I actually have booked with you guys", "expect": "next_appointment", "lang": "en", "note": "casual"},
+  {"id": "f035", "context": "fresh", "text": "Could you remind me when my next appointment is? I've gone and misplaced the card.", "expect": "next_appointment", "lang": "en", "note": "British"},
+  {"id": "f036", "context": "fresh", "text": "When is my husband Alex's physical? I think it's sometime in January but can't remember the day.", "expect": "next_appointment", "lang": "en", "note": "caregiver"},
+
+  {"id": "f037", "context": "fresh", "text": "what time do you close today", "expect": "hours_close_today", "lang": "en", "note": "direct"},
+  {"id": "f038", "context": "after_offer", "text": "you open til when today?", "expect": "hours_close_today", "lang": "en", "note": "brief, in offer context"},
+  {"id": "f039", "context": "fresh", "text": "how late are you guys open today i might swing by after work to drop off a form", "expect": "hours_close_today", "lang": "en", "note": "voice dictation"},
+  {"id": "f040", "context": "fresh", "text": "what time do ya shut this arvo?", "expect": "hours_close_today", "lang": "en", "note": "Australian"},
+
+  {"id": "f041", "context": "fresh", "text": "What are your opening hours?", "expect": "hours_general", "lang": "en", "note": "general hours"},
+  {"id": "f042", "context": "fresh", "text": "are you open on saturdays or nah", "expect": "hours_general", "lang": "en", "note": "weekend hours"},
+
+  {"id": "f043", "context": "fresh", "text": "do u take aetna", "expect": "insurance_unknown", "lang": "en", "note": "plan not in FAQ"},
+  {"id": "f044", "context": "fresh", "text": "I was wondering whether you accept Kaiser? I might be switching plans in January.", "expect": "insurance_unknown", "lang": "en", "note": "polite indirect, plan not in FAQ"},
+  {"id": "f045", "context": "fresh", "text": "¿aceptan Medi-Cal?", "expect": "insurance_unknown", "lang": "es", "note": "Spanish, plan not in FAQ"},
+
+  {"id": "f046", "context": "fresh", "text": "need a refill on my lisinopril", "expect": "refill", "lang": "en", "note": "direct"},
+  {"id": "f047", "context": "fresh", "text": "im almost out of my blood pressure pills can you send more to elm street", "expect": "refill", "lang": "en", "note": "voice dictation, names pharmacy"},
+  {"id": "f048", "context": "fresh", "text": "My husband Alex is down to his last 3 lisinopril tablets. Can you call in more?", "expect": "refill", "lang": "en", "note": "caregiver"},
+  {"id": "f049", "context": "fresh", "text": "pharmacy says I have 0 refills. AGAIN. can someone fix this", "expect": "refill", "lang": "en", "note": "annoyed"},
+  {"id": "f050", "context": "after_offer", "text": "Could I get a repeat prescription for my lisinopril please? Running a bit low.", "expect": "refill", "lang": "en", "note": "British 'repeat prescription', in offer context"},
+  {"id": "f051", "context": "fresh", "text": "refill pls, and I know I still owe you 40 bucks, I'll pay it online later", "expect": "refill", "lang": "en", "note": "brief; balance part is a statement, not a request"},
+
+  {"id": "f052", "context": "fresh", "text": "is it ok to take ibuprofen with lisinopril? got a sore back", "expect": "clinical", "lang": "en", "note": "medication interaction question"},
+  {"id": "f053", "context": "fresh", "text": "I've had a dry tickly cough ever since starting the lisinopril. Is that normal?", "expect": "clinical", "lang": "en", "note": "side effect question, not emergency"},
+  {"id": "f054", "context": "after_offer", "text": "my home cuff said 141/89 this morning, should I be worried about that?", "expect": "clinical", "lang": "en", "note": "mildly elevated reading, no symptoms"},
+  {"id": "f055", "context": "fresh", "text": "Would it be all right to have a glass of wine with dinner while I'm on my blood pressure medication?", "expect": "clinical", "lang": "en", "note": "polite indirect medical question"},
+  {"id": "f056", "context": "after_request", "text": "should i take my blood pressure pill the morning of the recheck or wait until after", "expect": "clinical", "lang": "en", "note": "voice dictation, medical question"},
+  {"id": "f057", "context": "fresh", "text": "¿puedo tomar el lisinopril con el estómago vacío?", "expect": "clinical", "lang": "es", "note": "Spanish medication question"},
+
+  {"id": "f058", "context": "fresh", "text": "what's the $40 for", "expect": "billing_explain", "lang": "en", "note": "brief"},
+  {"id": "f059", "context": "fresh", "text": "why am I being charged 40 bucks?? I HAVE insurance", "expect": "billing_explain", "lang": "en", "note": "annoyed"},
+  {"id": "f060", "context": "fresh", "text": "I see a balance of $40 on my husband's account. What is that from?", "expect": "billing_explain", "lang": "en", "note": "caregiver"},
+  {"id": "f061", "context": "after_offer", "text": "before that, what's this forty dollar bill about mate", "expect": "billing_explain", "lang": "en", "note": "Australian, in offer context"},
+
+  {"id": "f062", "context": "fresh", "text": "I'm having crushing chest pain right now", "expect": "emergency", "lang": "en", "note": "explicit"},
+  {"id": "f063", "context": "after_offer", "text": "prob nothing but my chest feels kinda tight and my left arm is tingly", "expect": "emergency", "lang": "en", "note": "understated chest/arm symptoms"},
+  {"id": "f064", "context": "fresh", "text": "my husband Alex just collapsed in the kitchen and isn't really responding", "expect": "emergency", "lang": "en", "note": "third person, collapse"},
+  {"id": "f065", "context": "fresh", "text": "Alex's face looks droopy on one side and his words are coming out slurred", "expect": "emergency", "lang": "en", "note": "third person, stroke signs"},
+  {"id": "f066", "context": "fresh", "text": "my blood pressure is 220 over 130 and i have the worst headache of my life and my vision is going blurry", "expect": "emergency", "lang": "en", "note": "voice dictation, hypertensive crisis"},
+  {"id": "f067", "context": "after_request", "text": "Bit of a strange one, I've suddenly lost the vision in one eye and my arm's gone numb. Probably fine?", "expect": "emergency", "lang": "en", "note": "British understated, stroke signs"},
+  {"id": "f068", "context": "fresh", "text": "me duele mucho el pecho y no puedo respirar bien", "expect": "emergency", "lang": "es", "note": "Spanish chest pain + breathing"},
+  {"id": "f069", "context": "fresh", "text": "lips and tongue swelling up after my pill and it's getting hard to breathe", "expect": "emergency", "lang": "en", "note": "explicit, angioedema"},
+  {"id": "f070", "context": "fresh", "text": "ugh I can't really feel the right side of my body. is the clinic open today?", "expect": "emergency", "lang": "en", "note": "understated, mixed with hours question; emergency dominates"},
+  {"id": "f071", "context": "fresh", "text": "My mum Alex is confused, sweaty and says her chest hurts. What do I do?", "expect": "emergency", "lang": "en", "note": "third person, caregiver child"},
+
+  {"id": "f072", "context": "fresh", "text": "whats ur address", "expect": "faq_address", "lang": "en", "note": "brief"},
+  {"id": "f073", "context": "after_request", "text": "Where are you located exactly? Never been to the clinic before.", "expect": "faq_address", "lang": "en", "note": "location question"},
+  {"id": "f074", "context": "fresh", "text": "is there parking or do I have to circle the block for an hour", "expect": "faq_parking", "lang": "en", "note": "sarcastic"},
+  {"id": "f075", "context": "after_request", "text": "where do I park the ute when I come in?", "expect": "faq_parking", "lang": "en", "note": "Australian"},
+  {"id": "f076", "context": "fresh", "text": "what's the clinic's phone number", "expect": "faq_phone", "lang": "en", "note": "direct"},
+  {"id": "f077", "context": "fresh", "text": "What do I need to bring along to my physical in January?", "expect": "faq_bring", "lang": "en", "note": "what to bring"},
+  {"id": "f078", "context": "fresh", "text": "what's your cancellation policy, like how much notice do you need", "expect": "faq_cancellation", "lang": "en", "note": "policy question, not a cancel request"},
+
+  {"id": "f079", "context": "after_aetna_offer", "text": "ya", "expect": "staff_accept", "lang": "en", "note": "very brief yes"},
+  {"id": "f080", "context": "after_aetna_offer", "text": "That would be wonderful, thank you so much.", "expect": "staff_accept", "lang": "en", "note": "polite yes"},
+
+  {"id": "f081", "context": "after_request", "text": "actually never mind, cancel that request", "expect": "withdraw", "lang": "en", "note": "direct withdraw"},
+  {"id": "f082", "context": "after_request", "text": "nah scrap that, I'll sort it out myself later", "expect": "withdraw", "lang": "en", "note": "Australian withdraw"},
+
+  {"id": "f083", "context": "fresh", "text": "Can I talk to a real person please?", "expect": "talk_to_staff", "lang": "en", "note": "polite"},
+  {"id": "f084", "context": "fresh", "text": "I'm done texting a robot. get me a human", "expect": "talk_to_staff", "lang": "en", "note": "annoyed"},
+
+  {"id": "f085", "context": "fresh", "text": "thanks!", "expect": "no_request", "lang": "en", "note": "small talk"},
+  {"id": "f086", "context": "fresh", "text": "lol cheers, have a good one", "expect": "no_request", "lang": "en", "note": "small talk"}
+]

@@ -1,0 +1,1134 @@
+[
+  {
+    "id": "ask_time-01",
+    "context": "after_offer",
+    "text": "Yes please.",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "plain, minimal"
+  },
+  {
+    "id": "ask_time-02",
+    "context": "after_offer",
+    "text": "yeah sure go ahead",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "fragment, no punctuation"
+  },
+  {
+    "id": "ask_time-03",
+    "context": "after_offer",
+    "text": "Good morning, and thank you for the reminder. Yes, I would be most grateful if you could arrange that for me. I am retired now, so my calendar is rather empty these days.",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "older adult, formal; flexible but names no day"
+  },
+  {
+    "id": "ask_time-04",
+    "context": "after_offer",
+    "text": "omg yes ngl i totally forgot she said that lol. bet, go for it",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "teen-style slang"
+  },
+  {
+    "id": "ask_time-05",
+    "context": "after_offer",
+    "text": "Yes I want this, please you can ask a time for me",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "ask_time-06",
+    "context": "after_offer",
+    "text": "Oh gosh, yes. I'm so sorry, I meant to call about that weeks ago and it completely slipped my mind with everything going on at work and with my mom's move. Yes please, whatever you need from me.",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "anxious, over-explains; no day given"
+  },
+  {
+    "id": "ask_time-07",
+    "context": "after_offer",
+    "text": "Sí, por favor. Gracias por acordarse de mí.",
+    "expect": "ask_time",
+    "lang": "es"
+  },
+  {
+    "id": "ask_time-08",
+    "context": "after_offer",
+    "text": "sure why not, been on my to do list forever. my cuff at home is on its last legs anyway",
+    "expect": "ask_time",
+    "lang": "en",
+    "note": "idiom + unrelated detail about home BP cuff"
+  },
+  {
+    "id": "decline_offer-01",
+    "context": "after_offer",
+    "text": "No thank you.",
+    "expect": "decline_offer",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "decline_offer-02",
+    "context": "after_offer",
+    "text": "nah im good fr, my bp has been fine at home",
+    "expect": "decline_offer",
+    "lang": "en",
+    "note": "teen-style"
+  },
+  {
+    "id": "decline_offer-03",
+    "context": "after_offer",
+    "text": "Thank you kindly for the reminder, but I believe I shall wait and have it looked at during my physical in January.",
+    "expect": "decline_offer",
+    "lang": "en",
+    "note": "older adult, formal; polite decline that mentions the booked physical"
+  },
+  {
+    "id": "decline_offer-04",
+    "context": "after_offer",
+    "text": "not right now, work is nuts this month. ill reach out when things calm donw",
+    "expect": "decline_offer",
+    "lang": "en",
+    "note": "busy, typo; defers indefinitely"
+  },
+  {
+    "id": "create_appointment-01",
+    "context": "after_time_question",
+    "text": "Tuesday at 2 works for me.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "14:00"
+    },
+    "lang": "en",
+    "note": "plain slot pick"
+  },
+  {
+    "id": "create_appointment-02",
+    "context": "after_time_question",
+    "text": "thurs 4pm pls",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon",
+      "slot": "16:00"
+    },
+    "lang": "en",
+    "note": "fragment"
+  },
+  {
+    "id": "create_appointment-03",
+    "context": "after_time_question",
+    "text": "The half past three appointment would suit me very well, thank you. My neighbour has kindly offered to drive me.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "15:30"
+    },
+    "lang": "en",
+    "note": "older adult, formal; time only (3:30 is offered only on Tuesday); unrelated detail"
+  },
+  {
+    "id": "create_appointment-04",
+    "context": "after_time_question",
+    "text": "1:30 thurs works ill come right after my sons dentist thign",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon",
+      "slot": "13:30"
+    },
+    "lang": "en",
+    "note": "busy parent, typo, no punctuation"
+  },
+  {
+    "id": "create_appointment-05",
+    "context": "after_time_question",
+    "text": "El martes a las 2 me queda bien, gracias.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "14:00"
+    },
+    "lang": "es"
+  },
+  {
+    "id": "create_appointment-06",
+    "context": "after_time_question",
+    "text": "none of those really work w my schedule, could i do monday morning instead?",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-09",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "rejects listed slots and asks for an unlisted day"
+  },
+  {
+    "id": "create_appointment-07",
+    "context": "after_time_question",
+    "text": "Tuesday afternoon, either time is fine.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "day + window, no specific slot"
+  },
+  {
+    "id": "create_appointment-08",
+    "context": "after_time_question",
+    "text": "For me Thursday is more better, in the afternoon. Any time the doctor prefer.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "non-native English; no specific slot"
+  },
+  {
+    "id": "create_appointment-09",
+    "context": "after_time_question",
+    "text": "umm i guess the 4 oclock one?? if its still open",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon",
+      "slot": "16:00"
+    },
+    "lang": "en",
+    "note": "teen-style hedge; time only (4:00 is offered only on Thursday)"
+  },
+  {
+    "id": "create_appointment-10",
+    "context": "after_time_question",
+    "text": "Is there any chance of Thursday morning instead? My husband has the car in the afternoons.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "asks for a window that was not listed; unrelated detail"
+  },
+  {
+    "id": "create_appointment-11",
+    "context": "after_offer",
+    "text": "sure, monday morning if possible. im off that day",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-09",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "agrees and gives a day in one message"
+  },
+  {
+    "id": "create_appointment-12",
+    "context": "after_offer",
+    "text": "Yes. Thursday the 12th in the afternoon, if Dr. Lee has time.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "hedged"
+  },
+  {
+    "id": "create_appointment-13",
+    "context": "after_offer",
+    "text": "yea ok can i do tues at 3:30",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "15:30"
+    },
+    "lang": "en",
+    "note": "names a listed slot before seeing the list"
+  },
+  {
+    "id": "create_appointment-14",
+    "context": "after_offer",
+    "text": "Oh yes please. Honestly I've been a little worried about it since my mom had a stroke at about my age. Mornings are best for me, so maybe Tuesday morning if possible? Sorry, I know that's not much notice.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "anxious; family history of stroke, not a current symptom"
+  },
+  {
+    "id": "create_appointment-15",
+    "context": "fresh",
+    "text": "Hi, this is Alex Morgan. I'd like to set up the blood pressure recheck Dr. Lee wanted. Could I come in Tuesday the 10th in the afternoon?",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "patient starts the conversation"
+  },
+  {
+    "id": "create_appointment-16",
+    "context": "fresh",
+    "text": "can i come in mon nov 16 in the am for my bp check w dr lee",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-16",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "explicit date, abbreviations"
+  },
+  {
+    "id": "create_appointment-17",
+    "context": "fresh",
+    "text": "Hello, I need make appointment with Dr. Lee for check my pressure. November 12 in the morning is good for me.",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "non-native English; explicit date"
+  },
+  {
+    "id": "create_appointment-18",
+    "context": "fresh",
+    "text": "Good morning. I understand Dr. Lee wishes to see me again regarding my blood pressure. Might I come in on Tuesday, November 10th, at two o'clock?",
+    "expect": "create_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "14:00"
+    },
+    "lang": "en",
+    "note": "older adult, formal; time in words"
+  },
+  {
+    "id": "update_appointment-01",
+    "context": "after_request",
+    "text": "Could we push it to Monday, November 16 instead?",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-16",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "explicit date only; window stays afternoon"
+  },
+  {
+    "id": "update_appointment-02",
+    "context": "after_request",
+    "text": "actually mornings r better for me, same day is fine",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "changes window only"
+  },
+  {
+    "id": "update_appointment-03",
+    "context": "after_request",
+    "text": "Can you make it the 3:30 one?",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "15:30"
+    },
+    "lang": "en",
+    "note": "picks a listed slot on the same day"
+  },
+  {
+    "id": "update_appointment-04",
+    "context": "after_request",
+    "text": "somethign came up tues, can we swithc to thurs at 4",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon",
+      "slot": "16:00"
+    },
+    "lang": "en",
+    "note": "busy, typos"
+  },
+  {
+    "id": "update_appointment-05",
+    "context": "after_request",
+    "text": "I must beg your pardon, but I find I have a prior engagement on Tuesday. Would Thursday the 12th, in the morning, be at all possible instead?",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "older adult, formal; changes day and window"
+  },
+  {
+    "id": "update_appointment-06",
+    "context": "after_request",
+    "text": "Please change to Thursday 1:30, on Tuesday I must to work.",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon",
+      "slot": "13:30"
+    },
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "update_appointment-07",
+    "context": "after_request",
+    "text": "can u make it 2pm instead",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-10",
+      "window": "afternoon",
+      "slot": "14:00"
+    },
+    "lang": "en",
+    "note": "time only; day unchanged"
+  },
+  {
+    "id": "update_appointment-08",
+    "context": "after_request",
+    "text": "Hi, sorry to switch things around on you. Is Monday, November 9th in the morning an option instead?",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-09",
+      "window": "morning"
+    },
+    "lang": "en",
+    "note": "explicit date + window, phrased as a question"
+  },
+  {
+    "id": "update_appointment-09",
+    "context": "after_request",
+    "text": "Hi, I'm so sorry, I just looked at my calendar and realized I have a dentist appointment Tuesday afternoon that I completely forgot about. Would it be possible to move my request to Thursday? Afternoon is still fine. Again, really sorry for the hassle.",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "anxious, over-explains; mentions an unrelated Tuesday-afternoon appointment"
+  },
+  {
+    "id": "update_appointment-10",
+    "context": "after_request",
+    "text": "thurs instead?",
+    "expect": "update_appointment",
+    "args": {
+      "date": "2026-11-12",
+      "window": "afternoon"
+    },
+    "lang": "en",
+    "note": "fragment; day only, window stays afternoon"
+  },
+  {
+    "id": "status_pending-01",
+    "context": "after_request",
+    "text": "Is it confirmed?",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "status_pending-02",
+    "context": "after_request",
+    "text": "so am i booked for tuesday or not yet",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "casual, no punctuation"
+  },
+  {
+    "id": "status_pending-03",
+    "context": "after_request",
+    "text": "Good morning. May I ask whether my appointment for Tuesday has been confirmed? I have not yet received any word from the office.",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "status_pending-04",
+    "context": "after_request",
+    "text": "did they lock it in yet?? gotta tell my boss",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "idiom + unrelated detail"
+  },
+  {
+    "id": "status_pending-05",
+    "context": "after_request",
+    "text": "¿Ya me confirmaron la cita del martes o todavía no?",
+    "expect": "status_pending",
+    "lang": "es"
+  },
+  {
+    "id": "status_pending-06",
+    "context": "after_request",
+    "text": "any update on my request",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "fragment; contains the word 'update' but asks for status"
+  },
+  {
+    "id": "status_pending-07",
+    "context": "after_request",
+    "text": "Hello, the appointment is fix now or I need to wait an answer?",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "status_pending-08",
+    "context": "after_request",
+    "text": "Sorry to keep bugging you, I just want to make sure, did someone actually approve the Tuesday time? I don't want to show up and not be on the schedule.",
+    "expect": "status_pending",
+    "lang": "en",
+    "note": "anxious"
+  },
+  {
+    "id": "next_appointment-01",
+    "context": "fresh",
+    "text": "When is my next appointment?",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "next_appointment-02",
+    "context": "fresh",
+    "text": "what day is my physical again? lost the reminder card",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "casual"
+  },
+  {
+    "id": "next_appointment-03",
+    "context": "fresh",
+    "text": "Good morning. Would you kindly remind me of the date and time of my next scheduled appointment? I seem to have misplaced my calendar.",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "next_appointment-04",
+    "context": "fresh",
+    "text": "do i have any appts coming up",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "fragment"
+  },
+  {
+    "id": "next_appointment-05",
+    "context": "fresh",
+    "text": "Hi, I can't remember if I have anything booked with Dr Lee. Can you check for me?",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "indirect"
+  },
+  {
+    "id": "next_appointment-06",
+    "context": "after_offer",
+    "text": "Wait, don't I already have an appointment with her coming up? When is that?",
+    "expect": "next_appointment",
+    "lang": "en",
+    "note": "answers the outreach with a question instead of yes/no"
+  },
+  {
+    "id": "hours_close_today-01",
+    "context": "fresh",
+    "text": "What time do you close today?",
+    "expect": "hours_close_today",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "hours_close_today-02",
+    "context": "fresh",
+    "text": "how late r u guys open 2day",
+    "expect": "hours_close_today",
+    "lang": "en",
+    "note": "teen-style"
+  },
+  {
+    "id": "hours_close_today-03",
+    "context": "fresh",
+    "text": "Buenos días, ¿a qué hora cierran hoy?",
+    "expect": "hours_close_today",
+    "lang": "es"
+  },
+  {
+    "id": "hours_close_today-04",
+    "context": "fresh",
+    "text": "Until what time the office is open today?",
+    "expect": "hours_close_today",
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "hours_close_today-05",
+    "context": "after_request",
+    "text": "are you still open this aftrenoon? need to drop off my kids sports form before you close what time is that",
+    "expect": "hours_close_today",
+    "lang": "en",
+    "note": "busy parent, typo; unrelated detail"
+  },
+  {
+    "id": "hours_close_today-06",
+    "context": "fresh",
+    "text": "Good morning. Could you please tell me at what time the clinic closes this evening? I should like to telephone before then.",
+    "expect": "hours_close_today",
+    "lang": "en",
+    "note": "older adult, formal; 'this evening' = today"
+  },
+  {
+    "id": "hours_general-01",
+    "context": "fresh",
+    "text": "What are your hours?",
+    "expect": "hours_general",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "hours_general-02",
+    "context": "fresh",
+    "text": "r u open saturdays",
+    "expect": "hours_general",
+    "lang": "en",
+    "note": "teen-style; weekend question"
+  },
+  {
+    "id": "hours_general-03",
+    "context": "fresh",
+    "text": "Hello, which days and times the clinic is open? I work all week so I am not sure when I can come.",
+    "expect": "hours_general",
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "insurance_unknown-01",
+    "context": "fresh",
+    "text": "Do you take Aetna?",
+    "expect": "insurance_unknown",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "insurance_unknown-02",
+    "context": "fresh",
+    "text": "My husband's company is switching us to Cigna in January. Will I still be able to see Dr. Lee with that?",
+    "expect": "insurance_unknown",
+    "lang": "en",
+    "note": "indirect"
+  },
+  {
+    "id": "insurance_unknown-03",
+    "context": "fresh",
+    "text": "do yall accept medi-cal",
+    "expect": "insurance_unknown",
+    "lang": "en",
+    "note": "casual"
+  },
+  {
+    "id": "insurance_unknown-04",
+    "context": "after_request",
+    "text": "oh also, is the clinic in network with UnitedHealthcare? might be switching jobs soon",
+    "expect": "insurance_unknown",
+    "lang": "en",
+    "note": "asked while a request is pending"
+  },
+  {
+    "id": "insurance_unknown-05",
+    "context": "fresh",
+    "text": "I turn 65 in March and will be going onto Medicare. Do you accept Medicare? I should hate to have to leave Dr. Lee.",
+    "expect": "insurance_unknown",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "refill-01",
+    "context": "fresh",
+    "text": "I need a refill on my lisinopril please.",
+    "expect": "refill",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "refill-02",
+    "context": "fresh",
+    "text": "almost out of my bp pils can u send more to elm st pharmcy",
+    "expect": "refill",
+    "lang": "en",
+    "note": "busy parent, typos, no punctuation"
+  },
+  {
+    "id": "refill-03",
+    "context": "fresh",
+    "text": "Pharmacy says there are no refills left on my lisinopril 10mg. Can Dr. Lee send a new prescription over?",
+    "expect": "refill",
+    "lang": "en"
+  },
+  {
+    "id": "refill-04",
+    "context": "fresh",
+    "text": "Hola, ya casi se me acaban las pastillas de lisinopril y en la farmacia me dicen que ya no tengo resurtidos. ¿Me pueden mandar una receta nueva?",
+    "expect": "refill",
+    "lang": "es"
+  },
+  {
+    "id": "refill-05",
+    "context": "fresh",
+    "text": "Hello, my medicine for the pressure is almost finish. Please can you send again to pharmacy?",
+    "expect": "refill",
+    "lang": "en",
+    "note": "non-native English; no drug name"
+  },
+  {
+    "id": "refill-06",
+    "context": "fresh",
+    "text": "Down to my last few lisinopril, could you renew it? Also tell Dr Lee my daughter got into Berkeley!",
+    "expect": "refill",
+    "lang": "en",
+    "note": "unrelated detail"
+  },
+  {
+    "id": "refill-07",
+    "context": "fresh",
+    "text": "Good morning. I should like to request a renewal of my Lisinopril, 10 milligrams. I have perhaps four tablets remaining. The pharmacy is Elm Street, as before.",
+    "expect": "refill",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "refill-08",
+    "context": "fresh",
+    "text": "Sorry to bother you, I just noticed I only have about 5 days of my blood pressure pills left and the pharmacy told me there are no refills on it. I really don't want to run out. Could someone please send a new prescription in? Thank you so much.",
+    "expect": "refill",
+    "lang": "en",
+    "note": "anxious, over-explains"
+  },
+  {
+    "id": "refill-09",
+    "context": "after_request",
+    "text": "also need a refill. lisinopril",
+    "expect": "refill",
+    "lang": "en",
+    "note": "fragment, asked while a request is pending"
+  },
+  {
+    "id": "clinical-01",
+    "context": "fresh",
+    "text": "Is it ok to take ibuprofen for my back while I'm on lisinopril?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "drug interaction question"
+  },
+  {
+    "id": "clinical-02",
+    "context": "fresh",
+    "text": "I've had a tickly dry cough for a few weeks now. Could that be from my blood pressure pill?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "mild side effect"
+  },
+  {
+    "id": "clinical-03",
+    "context": "after_request",
+    "text": "My home readings have been around 145/92 most days this week. Should I be doing anything different before Tuesday?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "mildly elevated readings, no symptoms; mentions the pending visit"
+  },
+  {
+    "id": "clinical-04",
+    "context": "fresh",
+    "text": "forgot my pill yesterday do i take 2 todya",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "missed dose, typo, no punctuation"
+  },
+  {
+    "id": "clinical-05",
+    "context": "fresh",
+    "text": "lowkey can i drink on lisinopril? going to a wedding sat",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "teen-style"
+  },
+  {
+    "id": "clinical-06",
+    "context": "fresh",
+    "text": "Should I be taking my lisinopril in the morning or at night? I've been taking it at bedtime.",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "dosing time question"
+  },
+  {
+    "id": "clinical-07",
+    "context": "fresh",
+    "text": "I have been using a salt substitute on my food to cut down on sodium. I read that some of them contain potassium. Is that safe with my medication?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "clinical-08",
+    "context": "fresh",
+    "text": "Since I start the lisinopril I feel more tired in the day. This is normal for this medicine?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "non-native English; mild side effect"
+  },
+  {
+    "id": "clinical-09",
+    "context": "fresh",
+    "text": "my numbers have been good for like 2 months, can i just stop taking the bp meds?",
+    "expect": "clinical",
+    "lang": "en",
+    "note": "asks to stop medication"
+  },
+  {
+    "id": "billing_explain-01",
+    "context": "fresh",
+    "text": "What is the $40 charge on my account?",
+    "expect": "billing_explain",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "billing_explain-02",
+    "context": "fresh",
+    "text": "why do i owe 40 bucks??",
+    "expect": "billing_explain",
+    "lang": "en",
+    "note": "casual"
+  },
+  {
+    "id": "billing_explain-03",
+    "context": "fresh",
+    "text": "I received a statement for $40.00. I was under the impression that my insurance covered my visits in full. Could you please explain what this charge is for?",
+    "expect": "billing_explain",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "billing_explain-04",
+    "context": "fresh",
+    "text": "Me llegó una cuenta de 40 dólares. ¿Me pueden explicar de qué es?",
+    "expect": "billing_explain",
+    "lang": "es"
+  },
+  {
+    "id": "billing_explain-05",
+    "context": "fresh",
+    "text": "hi whats my balance for? i dont remember getting anything done besides the bp check",
+    "expect": "billing_explain",
+    "lang": "en",
+    "note": "no amount given"
+  },
+  {
+    "id": "billing_explain-06",
+    "context": "fresh",
+    "text": "There's a $40 balance on my portal. Is that from the October visit or something else? Thx",
+    "expect": "billing_explain",
+    "lang": "en",
+    "note": "guesses the source"
+  },
+  {
+    "id": "emergency-01",
+    "context": "fresh",
+    "text": "I think I'm having a heart attack. Crushing pain in my chest and my left arm hurts.",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "explicit"
+  },
+  {
+    "id": "emergency-02",
+    "context": "fresh",
+    "text": "Pardon the intrusion. I have had a peculiar pressure in my chest since about eight o'clock this morning, and it seems to travel up into my jaw. I expect it is only indigestion, but I thought I ought to mention it.",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "older adult; understated chest pain radiating to jaw"
+  },
+  {
+    "id": "emergency-03",
+    "context": "after_offer",
+    "text": "chest pain on and off all morning + sweaty and kinda nauseous. cant leave work rn, can i get seen thurs?",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "understated; asks for an appointment, but symptoms take priority"
+  },
+  {
+    "id": "emergency-04",
+    "context": "fresh",
+    "text": "yo my chest is rly tight n i cant breathe rn",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "teen-style"
+  },
+  {
+    "id": "emergency-05",
+    "context": "fresh",
+    "text": "My lips and my tongue are swelling very big since one hour and it is hard to swallow. I take the lisinopril.",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "non-native English; possible angioedema"
+  },
+  {
+    "id": "emergency-06",
+    "context": "after_request",
+    "text": "I'm sorry if this is nothing and I'm overreacting, but about 20 minutes ago I suddenly couldn't see out of my right eye, like a curtain came down, and now I have a pounding headache. Is it okay to just wait for my appointment on Tuesday?",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "anxious; sudden vision loss; asks to wait for the pending visit"
+  },
+  {
+    "id": "emergency-07",
+    "context": "fresh",
+    "text": "fainted this morning. hit my head on the counter. still woozy",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "fragments"
+  },
+  {
+    "id": "emergency-08",
+    "context": "fresh",
+    "text": "My cuff says 210/124 and I've got the worst headache of my life. Took it twice to be sure.",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "very high reading with severe headache"
+  },
+  {
+    "id": "emergency-09",
+    "context": "fresh",
+    "text": "This is Alex's daughter. Dad's speech is slurred and the right side of his face is drooping. What do we do??",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "family member texting; stroke signs"
+  },
+  {
+    "id": "emergency-10",
+    "context": "fresh",
+    "text": "my 3yo got into my lisinoprl bottle no idea how many he ate hes acting rly sleepy",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "busy parent, typo; child ingestion"
+  },
+  {
+    "id": "emergency-11",
+    "context": "fresh",
+    "text": "honestly i dont see the point anymore. ive been thinking about taking the whole bottle of my pills tonight",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "self-harm risk; indirect"
+  },
+  {
+    "id": "emergency-12",
+    "context": "fresh",
+    "text": "Me duele muchísimo el pecho y se me durmió el brazo izquierdo. ¿Qué hago?",
+    "expect": "emergency",
+    "lang": "es"
+  },
+  {
+    "id": "emergency-13",
+    "context": "after_request",
+    "text": "Probably not a big deal, but I can't really catch my breath even just sitting on the couch, and my ankles are really puffy. Maybe I'll just mention it on Tuesday.",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "understated; short of breath at rest"
+  },
+  {
+    "id": "emergency-14",
+    "context": "fresh",
+    "text": "weird thing, my left hand went numb and clumsy and my words are coming out kind of jumbled. started maybe half an hour ago. prob just tired",
+    "expect": "emergency",
+    "lang": "en",
+    "note": "understated stroke signs"
+  },
+  {
+    "id": "faq_address-01",
+    "context": "fresh",
+    "text": "What's the address of the clinic?",
+    "expect": "faq_address",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "faq_address-02",
+    "context": "after_request",
+    "text": "and whats the address again? i always forget which building it is",
+    "expect": "faq_address",
+    "lang": "en",
+    "note": "asked while a request is pending"
+  },
+  {
+    "id": "faq_parking-01",
+    "context": "fresh",
+    "text": "Is there parking at your office?",
+    "expect": "faq_parking",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "faq_parking-02",
+    "context": "after_request",
+    "text": "where do i park on tues? last time i got a ticket on the street lol",
+    "expect": "faq_parking",
+    "lang": "en",
+    "note": "casual; asked while a request is pending"
+  },
+  {
+    "id": "faq_phone-01",
+    "context": "fresh",
+    "text": "What's the clinic's phone number?",
+    "expect": "faq_phone",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "faq_phone-02",
+    "context": "fresh",
+    "text": "Hi, I got a new phone and lost all my contacts. What number do I call to reach you guys?",
+    "expect": "faq_phone",
+    "lang": "en",
+    "note": "indirect"
+  },
+  {
+    "id": "faq_bring-01",
+    "context": "fresh",
+    "text": "What should I bring to my physical in January?",
+    "expect": "faq_bring",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "faq_bring-02",
+    "context": "after_request",
+    "text": "do i need to bring anything tues? like my insurance card?",
+    "expect": "faq_bring",
+    "lang": "en",
+    "note": "asked while a request is pending"
+  },
+  {
+    "id": "faq_cancellation-01",
+    "context": "fresh",
+    "text": "What's your cancellation policy?",
+    "expect": "faq_cancellation",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "faq_cancellation-02",
+    "context": "fresh",
+    "text": "Should I ever need to cancel an appointment, how much notice do you require?",
+    "expect": "faq_cancellation",
+    "lang": "en",
+    "note": "older adult, formal; hypothetical"
+  },
+  {
+    "id": "staff_accept-01",
+    "context": "after_aetna_offer",
+    "text": "Yes please",
+    "expect": "staff_accept",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "staff_accept-02",
+    "context": "after_aetna_offer",
+    "text": "sure go for it thx",
+    "expect": "staff_accept",
+    "lang": "en",
+    "note": "casual"
+  },
+  {
+    "id": "staff_accept-03",
+    "context": "after_aetna_offer",
+    "text": "Yes, I would appreciate that very much. Please ask them to let me know either way.",
+    "expect": "staff_accept",
+    "lang": "en",
+    "note": "formal"
+  },
+  {
+    "id": "withdraw-01",
+    "context": "after_request",
+    "text": "Actually, never mind. I don't think I need the recheck after all.",
+    "expect": "withdraw",
+    "lang": "en",
+    "note": "hedged"
+  },
+  {
+    "id": "withdraw-02",
+    "context": "after_request",
+    "text": "pls cancel that, i had my bp checked at the pharmacy and it was totally normal",
+    "expect": "withdraw",
+    "lang": "en",
+    "note": "casual; gives a reason"
+  },
+  {
+    "id": "withdraw-03",
+    "context": "after_request",
+    "text": "I am sorry for the trouble but please take back my request. I will not come for the pressure check.",
+    "expect": "withdraw",
+    "lang": "en",
+    "note": "non-native English"
+  },
+  {
+    "id": "talk_to_staff-01",
+    "context": "fresh",
+    "text": "Can I talk to a real person please?",
+    "expect": "talk_to_staff",
+    "lang": "en",
+    "note": "plain"
+  },
+  {
+    "id": "talk_to_staff-02",
+    "context": "fresh",
+    "text": "I would much prefer to speak with a member of staff rather than an automated system. Could someone telephone me, please?",
+    "expect": "talk_to_staff",
+    "lang": "en",
+    "note": "older adult, formal"
+  },
+  {
+    "id": "no_request-01",
+    "context": "after_request",
+    "text": "Thank you so much!",
+    "expect": "no_request",
+    "lang": "en",
+    "note": "thanks after the request"
+  },
+  {
+    "id": "no_request-02",
+    "context": "after_request",
+    "text": "ok cool :)",
+    "expect": "no_request",
+    "lang": "en",
+    "note": "acknowledgement"
+  },
+  {
+    "id": "no_request-03",
+    "context": "fresh",
+    "text": "Hi! Just wanted to say thank you to Dr. Lee and everyone at the front desk, you were all so kind last month.",
+    "expect": "no_request",
+    "lang": "en",
+    "note": "small talk"
+  }
+]

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+server/var/
+*.db
+*.db-wal
+*.db-shm
+.env
+*.log
+*.pdf
